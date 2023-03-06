@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vite App</title>
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                <div>
+                    <label for="num1">Please enter first number :</label>
+                    <input type="number" id="num1" />
+                </div>
+                <div>
+                    <label for="num2">Please enter second number :</label>
+                    <input type="number" id="num2" />
+                </div>
+                <div>
+                    <label for="add">Addition</label>
+                    <input type="radio" name="op" value="add" /><br />
+                    <label for="sub">Subtraction</label>
+                    <input type="radio" name="op" value="sub" /><br />
+                    <label for="mul">Multiplication</label>
+                    <input type="radio" name="op" value="mul" /><br />
+                    <label for="mul">Division</label>
+                    <input type="radio" name="op" value="div" /><br />
+                </div>
+                <div>
+                    <button type="submit" id="submit">Cal</button>
+                    <button type="reset"></button>
+                </div>
+            </div>
+
+            <div>
+                <p id="showAns"></p>
+            </div>
+        </div>
+        <script type="module" src="/main.js"></script>
+        <script src="./script.js"></script>
+    </body>
+</html>

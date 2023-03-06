@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vite App</title>
+    </head>
+    <body>
+        <div class="container border my-5">
+            <div id="alert" class="my-2"></div>
+            <form class="mx-5 my-2">
+                <div class="my-4">
+                    <label for="empId">Employee Id</label>
+                    <input type="text" class="form-control" name="employeeId" id="empId" />
+                </div>
+                <div class="my-4 grid">
+                    <div class="row gy-4">
+                        <div class="col-12 col-lg-6">
+                            <label for="empName">Employee Name</label>
+                            <input type="text" class="form-control" name="employeeName" id="empName" />
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <label for="empEmail">Email</label>
+                            <input type="text" class="form-control" name="employeeEmail" id="empEmail" />
+                        </div>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="row gy-4 align-items-end">
+                        <div class="col-12 col-lg-2 col-md-3">
+                            <div class="grid align-items-center">
+                                <div class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <label for="gender">Gender</label>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" value="male" type="radio" name="gender" id="male" checked />
+                                                <label class="form-check-label" for="male">Male</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" value="female" type="radio" name="gender" id="female" />
+                                                <label class="form-check-label" for="female">Female</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4 col-md-4">
+                            <select class="form-select" aria-label="Default select example" id="emLoc">
+                                <option selected>Open this select menu</option>
+                                <option value="Ahmadabad">Ahmadabad</option>
+                                <option value="Rajkot">Rajkot</option>
+                                <option value="Surat">Surat</option>
+                                <option value="Vapi">Vapi</option>
+                                <option value="Morbi">Morbi</option>
+                                <option value="Jamnagar">Jamnagar</option>
+                                <option value="Vadodara">Vadodara</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-lg-6 col-md-5">
+                            <label for="empDate">Joining Date</label>
+                            <input type="date" class="form-control" name="empDate" id="empDate" />
+                        </div>
+                    </div>
+                </div>
+                <div class="grid my-4">
+                    <div class="row gy-4">
+                        <div class="col-12 col-lg-6">
+                            <label for="empAge">Age</label>
+                            <input type="text" class="form-control" name="employeeAge" id="empAge" />
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <label for="empDate">Contact</label>
+                            <input type="text" class="form-control" name="empDate" id="empContact" />
+                        </div>
+                    </div>
+                </div>
+                <div class="grid my-4">
+                    <div class="row gy-4">
+                        <div class="col-12 col-lg-6">
+                            <label for="empDesignation">Designation</label>
+                            <input type="text" class="form-control" name="employeeDesignation" id="empDesignation" />
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <label for="empSalary">Salary</label>
+                            <input type="text" class="form-control" name="employeeSalary" id="empSalary" />
+                        </div>
+                    </div>
+                </div>
+                <div class="grid my-4">
+                    <div class="row">
+                        <div class="col-4 col-lg-2 col-md-2">
+                            <button class="btn btn-primary border w-100" type="button" onclick="storeData()">Submit</button>
+                        </div>
+                        <div class="col-4 col-lg-2 col-md-2">
+                            <button class="btn btn-warning border w-100" type="reset">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script type="module" src="/main.js"></script>
+        <script src="./script.js"></script>
+    </body>
+</html>

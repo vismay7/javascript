@@ -1,0 +1,12 @@
+let array = ["asd", "qwe", "zxc", "rty", "fgh"];
+document.write("Array: " + array);
+array.push("123", "456");
+document.write("<br><br>Push: " + array);
+array.pop();
+document.write("<br><br>Pop: " + array);
+array.shift();
+document.write("<br><br>Shift: " + array);
+array.unshift("first");
+document.write("<br><br>Unshift: " + array);
+delete array[array.length - 1];
+document.write("<br><br>Delete: " + array);

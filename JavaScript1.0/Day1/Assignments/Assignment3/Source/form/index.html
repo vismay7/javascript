@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <script>
+        var data = [
+            {
+                state: "Maharashtra",
+                cities: ["Mumbai", "Pune", "Nagpur"],
+            },
+            {
+                state: "Karnataka",
+                cities: ["Bangalore", "Mysore", "Hubli"],
+            },
+            {
+                state: "Tamil Nadu",
+                cities: ["Chennai", "Coimbatore", "Madurai"],
+            },
+            {
+                state: "gujarat",
+                cities: ["as", "asd", "asd"],
+            },
+            // Add more states and cities here as needed
+        ];
+        function updateCities() {
+            var stateSelect = document.getElementById("stateSelect");
+            var citySelect = document.getElementById("citySelect");
+            var state = stateSelect.value;
+            var stateData = data.find(function (item) {
+                return item.state === state;
+            });
+            citySelect.innerHTML = "";
+            var defaultOption = document.createElement("option");
+            defaultOption.value = "";
+            defaultOption.text = "-- Select City --";
+            citySelect.add(defaultOption);
+            if (stateData) {
+                for (var i = 0; i < stateData.cities.length; i++) {
+                    var city = stateData.cities[i];
+                    var option = document.createElement("option");
+                    option.value = city;
+                    option.text = city;
+                    citySelect.add(option);
+                }
+            }
+        }
+        window.onload = function () {
+            var stateSelect = document.getElementById("stateSelect");
+            for (var i = 0; i < data.length; i++) {
+                var option = document.createElement("option");
+                option.value = data[i].state;
+                option.text = data[i].state;
+                stateSelect.add(option);
+            }
+            updateCities();
+        };
+    </script>
+    <body>
+        <label for="stateSelect">Select a state:</label>
+        <select id="stateSelect" onchange="updateCities()"></select>
+
+        <label for="citySelect">Select a city:</label>
+        <select id="citySelect"></select>
+    </body>
+</html>
