@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vite App</title>
+    </head>
+    <body>
+        <div>
+            <div>
+                <p>Enter a value :- (person1,person2)</p>
+            </div>
+            <div>
+                <input type="text" id="personName" placeholder="Enter Person Name" />
+                <input type="text" id="personCity" placeholder="Enter Person City" />
+                <button type="button" onclick="test(personName.value,personCity.value)">Find a Person</button>
+
+                <div>
+                    <p id="personDetail"></p>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="/main.js"></script>
+        <script src="./script.js"></script>
+    </body>
+</html>

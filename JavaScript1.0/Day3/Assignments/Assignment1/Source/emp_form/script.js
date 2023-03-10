@@ -15,6 +15,7 @@ function storeData() {
     for (let i = 0; i < element.length; i++) {
         if (element[i].value.length == 0) {
             alertBox.innerHTML = '<div class="alert alert-danger" role="alert">Enter all fields</div>';
+            return;
         } else {
             alertBox.innerHTML = "";
         }
@@ -23,6 +24,7 @@ function storeData() {
         let empIdReg = /^[0-9]{5,}$/.test(empId.value);
         if (!empIdReg) {
             alertBox.innerHTML = '<div class="alert alert-danger" role="alert">Enter a valid Id</div>';
+            return;
         } else {
             alertBox.innerHTML = "";
         }
@@ -32,6 +34,8 @@ function storeData() {
         let empAgereg = /^([1-9][0-9])$/.test(empAge.value); //1
         if (!empAgereg) {
             alertBox.innerHTML = '<div class="alert alert-danger" role="alert">Enter a Age 10 to 99</div>';
+            return;
+            return;
         } else {
             alertBox.innerHTML = "";
         }
@@ -40,6 +44,7 @@ function storeData() {
         let empEmailreg = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/.test(empEmail.value);
         if (!empEmailreg) {
             alertBox.innerHTML = '<div class="alert alert-danger" role="alert">Enter a Valid email Formate</div>';
+            return;
         } else {
             alertBox.innerHTML = "";
         }
@@ -53,6 +58,7 @@ function storeData() {
         let empConReg = /^[0-9]{10}$/.test(empContact.value);
         if (!empConReg) {
             alertBox.innerHTML = '<div class="alert alert-danger" role="alert">Enter a Valid Contact</div>';
+            return;
         } else {
             alertBox.innerHTML = "";
         }
@@ -61,6 +67,7 @@ function storeData() {
         let empSalReg = /^[0-9]+$/.test(empSalary.value);
         if (!empSalReg) {
             alertBox.innerHTML = '<div class="alert alert-danger" role="alert">Enter only digits in Salary feild</div>';
+            return;
         } else {
             alertBox.innerHTML = "";
         }
@@ -69,6 +76,7 @@ function storeData() {
         let empNameReg = /^[a-zA-Z]+$/.test(empName.value);
         if (!empNameReg) {
             alertBox.innerHTML = '<div class="alert alert-danger" role="alert">Enter only characters in Name feild</div>';
+            return;
         } else {
             alertBox.innerHTML = "";
         }
@@ -76,6 +84,7 @@ function storeData() {
     if (empLoc) {
         if (empLoc.value.length == 21) {
             alertBox.innerHTML = '<div class="alert alert-danger" role="alert">Please select a location</div>';
+            return;
         } else {
             alertBox.innerHTML = "";
         }
